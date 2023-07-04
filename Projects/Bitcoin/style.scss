@@ -1,0 +1,517 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --cor-text-header: #fff;
+   
+    --cor-button-html: #EF6026;
+    --cor-button-css: #2A61E3;
+   
+    --cor-button-btc: #965e1a;
+    --cor-text-btc: #633600;
+    --cor-button-btc-hover: #F7931A;
+}
+
+/* fonts */
+@font-face {
+    font-family: "topicos";
+    src: url(fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: "text-header";
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "main-h2";
+    src: url(fonts/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: "main-h3";
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "main";
+    src: url(fonts/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: "main-van-desvan-h4-block";
+    src: url(fonts/RobotoMono-Bold.ttf);
+}
+
+@font-face {
+    font-family: "main-van-desvan-text-block";
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: "lastro-ul";
+    src: url(fonts/Poppins-Light.ttf);
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 150vh;
+    background-image: url(image/background-png.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+header > .espacamento{
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.bit-image{
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    padding: 15px;
+}
+
+
+/*bloco a direita*/
+header > .espacamento > .direita{
+    width: 100%;
+    max-width: 500px;
+    float: right;
+    padding-right: 20px;
+}
+
+.direita, .bit-image{
+    margin: 75px 0;
+}
+
+/*bloco a direita > tecnologias usadas*/
+header > .espacamento > .direita > .tech{
+    color: var(--cor-text-header);
+    font-size: 22px;
+    font-family: "text-header";
+}
+header > .espacamento > .direita > .tech > .html > a, 
+header > .espacamento > .direita > .tech > .css > a 
+{
+    border-radius: 2px;
+    padding: 2px 5px;
+    color: var(--cor-text-header);
+    text-decoration: none;
+    font-family: "topicos";
+}
+header > .espacamento > .direita > .tech > .html > a{
+    background-color: var(--cor-button-html);
+}
+header > .espacamento > .direita > .tech > .css > a{
+    background-color: var(--cor-button-css);
+}
+
+/*bloco a direita > topicos do artigo*/
+header > .espacamento > .direita > .titulos{
+    margin: 50px 25px;
+    color: var(--cor-text-header);
+    font-family: "topicos";
+}
+
+header > .espacamento > .direita > .titulos > ul{
+    column-count: 2;/*dividir a coluna em dois*/
+    color: #eab300;
+}
+
+header > .espacamento > .direita > .titulos > ul > li{
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+header > .espacamento > .direita > .titulos > ul > li > a{
+    color: var(--cor-text-header);
+    text-decoration: none;
+}
+
+/*bloco a direita > texto info*/
+header > .espacamento > .direita > .text-info{
+    color: var(--cor-text-header);
+    margin: 50px 0;
+    text-align: justify;
+    font-size: 20px;
+    font-family: "text-header";
+}
+
+header > .espacamento > .direita > .text-info > p{
+    margin-bottom: 20px;
+}
+
+header > .espacamento > .direita > .botao > button{
+    padding: 10px;
+    font-size: 22px;
+    font-family: "topicos";
+    background-color: var(--cor-button-btc);
+    border-radius: 7px;
+    border: 2px solid var(--cor-text-btc);
+    cursor: pointer;
+}
+header > .espacamento > .direita > .botao > button:hover {
+    background-color: var(--cor-button-btc-hover);
+    text-decoration: none;
+}
+/*bloco a direita > botão*/
+button > a{
+    color: var(--cor-text-btc);
+    text-decoration: none;
+}
+
+/*bloco a direita > logo abaixo*/
+.logo{
+    display: block;
+    margin: 240px auto ;
+}
+
+/*main config gerais*/
+main{
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: auto;
+}
+
+main > #bitcoin > h2,
+main > #vantagens-e-desvantagens > h2,
+main > #poluente> h2,
+main > #lastro > h2{
+    text-align: center;
+    padding: 20px 0;
+    font-size: 27px;
+    font-family: "main-h2";
+}
+
+main > #bitcoin > h3,
+main > #vantagens-e-desvantagens > h3{
+    font-size: 26px;
+    margin: 20px 0 10px 0;
+    font-family: "main-h3";
+}
+
+main > #vantagens-e-desvantagens > h4{
+    font-size: 23px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+main > #bitcoin > p,
+main > #vantagens-e-desvantagens > p,
+main > #poluente> p,
+main > #lastro > p{
+    margin: 7.5px 0;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: justify;
+    font-family: "main";
+}
+
+main > #bitcoin,
+main > #vantagens-e-desvantagens,
+main > #poluente,
+main > #lastro{
+    margin: 40px 0;
+}
+
+/*primeiro texto - bitcoin*/
+main > #bitcoin > p > .destaque{
+    padding: 2px;
+    background-color: #048bd44d;
+}
+
+main > #bitcoin > p > .bit{
+    padding: 2px;
+    background-color: #d404044d;
+}
+
+main > #bitcoin > p > .destaque-gasto{
+    color: green;
+}
+
+main > #bitcoin > p > .destaque-hash-node{
+    color: orangered;
+}
+main > #bitcoin > p > .destaque-hash-node > abbr{
+    text-decoration: none;
+}
+/*segundo texto - vantagens e desvantagens*/
+#vantagens-e-desvantagens > h3{
+    padding: 30px 0 10px 30px;
+}
+
+#vantagens-e-desvantagens > .sescao-vantagem{
+    background-color: rgba(204, 204, 204, 0.418);
+    margin: 15px auto;
+    border-radius: 3px;
+    box-shadow: 4px 6px 4px rgba(0, 0, 0, 0.02);
+    padding: 20px;
+    width: 100%;
+    max-width: 1030px;
+}
+
+#vantagens-e-desvantagens > .sescao-vantagem > h4,
+#vantagens-e-desvantagens > .sescao-vantagem > p{
+    display: inline-block;
+    margin: 7.5px 0;
+    font-size: 20px;
+    line-height: 28px;
+}
+#vantagens-e-desvantagens > .sescao-vantagem > p{
+    width: 100%;
+    max-width: 1000px;
+    text-align: justify;
+    font-family: "main-van-desvan-text-block";
+    font-size: 18px;
+}
+#vantagens-e-desvantagens > .sescao-vantagem > h4{
+    font-size: 22px;
+    margin-left: 15px;
+    font-family: "main-van-desvan-h4-block";
+    display: inline;
+}
+
+#vantagens-e-desvantagens > .obs{
+    background-color: rgba(255, 0, 0, 0.5);
+    padding: 10px;
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+    max-width: 1030px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*terceiro texto - bitcoin poluente? */
+#poluente > img{
+    margin: 20px auto ;
+    display: block;
+    width: 100%;
+    max-width: 800px;
+}
+
+/*quarto texto - lastro do bitcoin*/
+#lastro ul{
+    margin: 20px;
+}
+#lastro ul li{
+    margin: 20px;
+    font-size: 1.1rem;
+    list-style-type: square;
+    font-family: "lastro-ul";
+}
+
+hr{
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-image: linear-gradient(90deg, #ccd2ff 10%, #1b2677 50%, #ccd2ff 100%);
+}
+
+/* footer */
+footer{
+    width: 100%;
+    height: 900px;
+    background-image: url(image/footer.png);
+    background-position: top;
+    position: relative;
+}
+
+footer > img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+footer > .footer-fonts > h1{
+    margin: 50px;
+    font-size: 3rem;
+    color: #fffcf3;
+    font-family: "text-header";
+}
+
+footer > .footer-fonts > ul{
+    column-count: 2;
+}
+
+footer > .footer-fonts >ul > li{
+    margin: 0 0 30px 70px ;
+    font-size: 30px;
+    color: #eab300;
+}
+footer > .footer-fonts >ul > li > a{
+    color: white;
+    text-decoration: none;
+    font-family: "topicos";
+}
+
+footer > .footer-fonts{
+    position: absolute;
+    bottom: 0;
+    padding: 50px;
+}
+
+footer > .copy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--cor-text-header);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 60px 0 10px 0;
+}
+
+/*botao para voltar ao topo do site*/
+.voltar{
+    position: fixed;
+    top: 92%;
+    left: 95%;
+    width: 50px;
+    height: 50px;
+    background-color: #eab300;
+    border-radius: 50%;
+    z-index: 10;
+}
+.voltar > a > img{
+    display: block;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 1315px) {
+    header{
+        position: relative;
+    }
+
+    .bit-image {
+        width: calc(100% - 500px);
+        padding: 20px;
+    }
+    .logo {
+        position: absolute;
+        top: 56%;
+        left: 10%;
+    }
+
+    footer{
+        height: 1200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .footer-fonts{
+        position: absolute;
+        left: 50%;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+
+    footer > .footer-fonts > h1{
+        text-align: center;
+    }
+
+    footer > .footer-fonts > ul{
+        margin: auto;
+    }
+
+    footer > img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .voltar{
+        top: 85%;
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .bit-image {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: auto;
+        padding: 0 20px 0 0;
+    }
+
+    header{
+        height: 1500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .logo {
+        width: 0;
+    }
+
+    header > .espacamento > .direita{
+        width: 100%;
+        max-width: 500px;
+        margin: 50px auto;
+        float: none;
+        padding: 0;
+
+    }
+}
+
+@media screen and (max-width: 665px) {
+    header {
+        height: 1700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .bit-image {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: auto;
+        padding: 5px;
+    }
+
+    footer{
+        height: 1700px;
+        
+    }
+    footer > .footer-fonts > ul{
+        column-count: 1;
+    }
+
+    .voltar{
+        top: 85%;
+        left: 84.5%;
+    }
+
+    header > .espacamento > .direita{
+        padding: 20px;
+    }
+
+    header > .espacamento > .direita > .tech{
+        text-align: center;
+    }
+
+    header > .espacamento > .direita > .titulos{
+        width: 200px;
+        margin: 30px auto 0 auto;
+    }
+
+    header > .espacamento > .direita > .titulos > ul{
+        column-count: 1;
+    }
+
+    .text-info{
+        margin: 0;
+    }
+}
