@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tec-bitcoin.css">
+    <title>Tecnologias do Bitcoin</title>
+</head>
+<body>
+    <header>
+        <section id="tecnologias">
+            <div class="text-info">
+                <div class="font1">
+                    <h2>Tecnologias Por trás do <img src="img/logo-footer.png" alt="logo bitcoin"></h2>
+                </div>
+                <div class="font2">
+                    <h3>O funcionamento do Bitcoin depende de várias tecnologias, mas as mais importantes são:</h3>
+
+                    <div class="list">
+                        <ul>
+                            <a href="#blockchain">
+                                <li>blockchain</li>
+                            </a>
+                            <a href="#criptografia">
+                                <li>criptografia</li>
+                            </a>
+                            <a href="#mineracao">
+                                <li>mineração</li>
+                            </a>
+                            <a href="#nodes">
+                                <li>Nós/Node</li>
+                            </a>
+                            <a href="#carteiras">
+                                <li>consenso descentralizado</li>
+                            </a>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </header>  
+    <main>     
+        <section id="blockchain">
+            <h2 class="fontp">O que e uma blockchain?</h2>
+            
+            <p>
+                O blockchain é um registro digital descentralizado que registra todas as transações em uma rede Bitcoin. Cada bloco de transação é criptografado e vinculado ao bloco anterior, formando uma cadeia de blocos, dentro desses blocos há varias tecnologias uma das mais importantes e o <span>hash</span>. Abaixo você pode ver um vídeo com uma explicação simples:
+            </p>
+        </section>
+
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/SSo_EIwHSd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+        <section id="hash">
+            <h2>o que e um hash:</h2>
+            
+            <p>uma função hash e um algoritmo que mapeia dados de comprimento variável para dados de comprimento fixo. os valores retornados por uma função hash são chamados valores hash, códigos hash, somas hash, checksums ou simplesmente hashes.</p>
+            
+            <p><span>hash</span> = código de tamanho fixo que representa um resumo de um dado de tamanho qualquer.</p>
+            
+            <p>para simplificar vamos supor que você tenha uma mensagem em um arquivo.txt quando você colocar essa mensagem dentro desse hash ele vai criar um código:</p>
+            
+            <img src="img/Captura de tela 2023-06-09 054830.png" alt="foto mostrando funcionamento de um hash">
+            
+            <p>
+                esse código ele vai ser exclusivo dessa mensagem que você enviou, se você mudar qualquer virgula acento ou letra dentro
+                desse texto e colocar pra gerar novamente no hash ele vai criar um código totalmente diferente.
+            </p>
+            
+            <h3>o hash tem 4 propriedades:</h3>
+            <div class="lista">
+                <ol type="1">
+                    <li>ser <span class="subtitle">fácil de calcular</span> a partir de uma entrada qualquer</li>
+                    <li>seja <span class="subtitle">muito difícil de gerar o mesmo</span> hash para duas entradas diferentes</li>
+                    <li>seja <span class="subtitle">muito difícil de descobrir a entrada original</span> a partir do código gerado pelo hash</li>
+                    <li>seja <span class="subtitle">muito difícil de modificar a entrada original</span> em alterar o hash</lil>
+                </ol>
+            </div>
+
+            <p>simplificando</p>
+            
+            <p>
+                1- esse passo a posso do arquivo ate o código passa pela função hash que é o algoritmo, e existe um passo a passo dentro de cada função dessa para gerar um hash code diferente, então a partir do arquivo de entrada esse passo a
+                passo vai rodar algumas coisas no algoritmo e vai gerar no final o código hash, mas esse passo a passo ele tem que ser
+                fácil de ser executado
+            </p>
+            
+            <img src="img/Captura de tela 2023-06-09 054958.png" alt="passo a passo">
+            
+            <p>
+                2- o mesmo código hash não pode ser gerado através de dois arquivos diferentes, mas existe algo chamado colisão que é
+                dados diferentes gerarem o mesmo hash, mas isso e quase impossível
+            </p>
+            
+            <p>
+                3- se você não tem acesso ao arquivo, você só tem o código hash, a partir dele você não consegue gerar o arquivo
+                original
+            </p>
+            
+            <p>4- como foi mostrado mais acima qualquer alteração no arquivo de entrada do hash será gerado um hash totalmente diferente</p>
+            
+            <h3>e pra que serve o hash?</h3>
+            
+            <p>em muitos casos poderíamos usar para garantir a integridade de uma determinada informação</p>
+            
+            <img src="img/Captura de tela 2023-05-15 143818.png" alt="passo a passo">
+            
+            <p>
+                vamos supor que você tenha o seu arquivo, você passa em uma função hash e ele cria o código, vamos supor que você vai
+                enviar esse arquivo para o seu amigo, quando seu amigo receber esse arquivo ele vai passar pela mesma função hash, que
+                vai executar os mesmos passos e ele vai gerar também um hash, e tendo em mãos esse hash gerado a partir do arquivo que
+                você recebeu do seu amigo, você consegue saber se o arquivo esta integro somente pelo hashcode.
+            </p>
+            
+            <p>
+                O Bitcoin utiliza criptografia para garantir a segurança das transações e proteger a privacidade dos usuários. <br> A
+                criptografia é usada para proteger a chave privada do usuário, que é usada para assinar digitalmente as transações.
+            </p>
+        </section>      
+        <section id="criptografia">
+            <h2 class="fontp">O que e a criptografia?</h2>
+            
+            <p>
+                O Bitcoin utiliza <span>criptografia</span> assimétrica de chave pública para garantir a segurança das transações e proteger a
+                privacidade dos usuários. Essa criptografia é baseada em algoritmos de criptografia de curva elíptica (ECC - Elliptic
+                Curve Cryptography) e usa um par de chaves - uma chave pública e uma chave privada - para autenticar as transações.
+            </p>
+            
+            <p>
+                Quando um usuário envia uma transação em Bitcoin, ele usa sua chave privada para assinar digitalmente a transação. A
+                chave pública correspondente é então usada para verificar a assinatura e confirmar que a transação é legítima. Essa
+                abordagem de criptografia de chave pública permite que as transações sejam verificadas e validadas pela rede Bitcoin sem
+                a necessidade de confiar em uma autoridade central. Além disso, a criptografia de curva elíptica usada pelo Bitcoin é
+                considerada muito segura e resistente a ataques de força bruta.
+            </p>
+        </section>      
+        <section id="mineracao">
+            <h2 class="fontp">Como a mineração funciona?</h2>
+            
+            <p>
+                A mineração é o processo pelo qual os usuários da rede Bitcoin validam as transações e criam novos bitcoins. A mineração
+                é essencial para o funcionamento da rede Bitcoin, pois é responsável por adicionar novas transações ao registro público
+                descentralizado (o blockchain) e garantir que todas as transações sejam válidas.
+            </p>
+            
+            <p>
+                Os mineradores usam poder de processamento computacional para resolver problemas matemáticos complexos e adicionar novos
+                blocos à cadeia de blocos. Esse processo é conhecido como "prova de trabalho" (Proof-of-Work - PoW) e envolve a
+                resolução de um problema matemático difícil e aleatório para encontrar um novo bloco que atenda a determinados
+                critérios. O primeiro minerador que encontrar a solução para o problema recebe uma recompensa em bitcoins (atualmente
+                6,25 bitcoins por bloco) e as taxas de transação associadas a esse bloco.
+            </p>
+            
+            <p>
+                O problema matemático a ser resolvido é projetado para ser difícil de resolver, mas fácil de verificar. Dessa forma, a
+                rede Bitcoin pode garantir que novos blocos sejam adicionados à cadeia de blocos de forma consistente e segura, sem a
+                necessidade de uma autoridade central ou confiável.
+            </p>
+            
+            <p>
+                A mineração requer poder de processamento computacional significativo e consome muita energia. Por esse motivo, muitos
+                mineradores se unem em pools de mineração para compartilhar o poder de processamento e aumentar suas chances de
+                encontrar novos blocos. O processo de mineração também se tornou mais competitivo ao longo do tempo, com a introdução de
+                máquinas de mineração especializadas e outras tecnologias avançadas para aumentar a eficiência da mineração.
+            </p>
+        </section>     
+        
+        <section id="nodes">
+            <h2 class="fontp">o que são os nós/nodes?</h2>
+            
+            <p>Bitcoin é uma rede descentralizada. Tá, mas descentralizada como?</p>
+            
+            <p>Se não tem um dono ou uma pessoa controlando a rede, quem controla então?</p>
+            
+            <p>Bom, isso só é possível porque Bitcoin tem pessoas ao redor do mundo inteiro rodando nodes e ajudando a validar a rede.</p>
+        
+        
+            <h3>Entenda os tipos de nodes:</h3>
+            
+            <h4>Full Node (Fully Validating Node)</h4>
+            
+            <p>
+                Um full node, ou nó completo, é responsável por validar blocos e transações que ocorrem na <a target="_blank" href="https://artigos.areabitcoin.com.br/o-que-e-blockchain-e-como-funciona/">rede blockchain</a>.
+            </p>
+            
+            <p>
+                Esse tipo de nó atua como um servidor, o que significa que tem muitos dados, por isso pra rodar um full node é
+                necessário equipamentos adequado.
+            </p>
+            
+            <p>
+                Então basicamente se você não está executando o seu próprio node para transmitir transações pra rede, você está
+                dependendo de outra pessoa que tem um node e está fazendo isso por você.
+            </p>
+            
+            <p>Quando você executa seu próprio node, você não precisa depender de terceiros para verificar suas próprias transações.</p>
+            
+            <h4>Node Archive</h4>
+            
+            <p>
+                Como o nome já diz, esse tipo de node possui uma cópia de todo o histórico do blockchain bitcoin. Esses nós são capazes
+                de validar transações e blocos recebidos, bem como consultar dados de blocos e transações em todo o histórico do
+                blockchain.
+            </p>
+            
+            <h4>Light Node</h4>
+            
+            <p>
+                Esse tipo de node também é conhecido como cliente de Verificação de Pagamento Simplificado (SPV) e permite que os
+                usuários verifiquem se suas próprias transações foram incluídas em um bloco ou não, sem baixar a cópia completa do
+                blockchain. Porém, não validam totalmente todos os blocos.
+            </p>
+            
+            <p>
+                Os light nodes participam da rede como terminais de comunicação e por não precisar baixar a cópia do blockchain inteiro
+                eles exigem bem menos download e capacidade de armazenamento do que os full nodes.
+            </p>
+            
+            <h4>Nodes de mineração</h4>
+            
+            <p>
+                E tem também os nodes de mineração, que produzem novos blocos, validam novas transações e resolvem o quebra-cabeça de
+                hash da prova de trabalho.
+            </p>
+            
+            <p>
+                Para se tornar um node de mineração é preciso um investimento a mais, pois esses nodes funcionam com um equipamento
+                específico chamado Asic, que hoje gira em torno de 50 a 100 mil reais por máquina, sem contar a manutenção e o alto
+                custo de energia elétrica aqui no Brasil.
+            </p>
+            
+            <p>
+                Você pode ser um ? Sim,
+                pode, porém você deve considerar o investimento a ser feito e a relação custo x retorno.
+            </p>
+        </section>
+        <section id="carteiras">
+            <h2 class="fontp">Como as carteiras funcionam?</h2>
+            
+            <p>
+                As carteiras são aplicativos ou dispositivos usados para armazenar, enviar e receber bitcoins. As carteiras permitem que
+                os usuários gerenciem suas chaves privadas e realizem transações com outros usuários da rede Bitcoin.
+            </p>
+            
+            <h2 class="fontp">como funciona esse Consenso descentralizado?</h2>
+            
+            <p>
+                O consenso descentralizado é o processo pelo qual os usuários da rede Bitcoin trabalham juntos para manter um registro
+                compartilhado e confiável das transações. Em vez de confiar em uma autoridade central, a rede Bitcoin é descentralizada
+                e todos os usuários têm um papel importante na manutenção do consenso.
+            </p>
+            
+            <p>
+                O consenso é alcançado por meio de um processo de validação de transações, conhecido como "validação por pares"
+                (peer-to-peer validation). Quando um usuário envia uma transação em Bitcoin, essa transação é transmitida para todos os
+                nós da rede Bitcoin. Cada nó verifica se a transação é válida e, se for o caso, a transação é adicionada a um bloco.
+                Quando um bloco é preenchido com transações, ele é adicionado à cadeia de blocos existente.
+            </p>
+            
+            <p>
+                Para garantir que todos os nós concordem sobre o estado atual da rede Bitcoin, cada bloco contém uma prova de trabalho
+                (Proof-of-Work) que é difícil de resolver, mas fácil de verificar. Isso significa que os mineradores têm que gastar
+                tempo e recursos para encontrar a solução correta para o problema, mas todos os outros nós podem facilmente verificar
+                que a solução está correta. Quando um bloco é adicionado à cadeia de blocos, todos os nós da rede Bitcoin atualizam sua
+                cópia do registro público para refletir o novo estado.
+            </p>
+            
+            <p>
+                O processo de validação por pares e a prova de trabalho garantem que a rede Bitcoin seja resistente a ataques e
+                tentativas de alterar o registro público. Mesmo que um atacante tivesse controle sobre uma parte significativa do poder
+                de processamento da rede, ainda seria extremamente difícil e caro alterar o registro público existente.
+            </p>
+            
+            <p>
+                Em resumo, o consenso descentralizado é alcançado por meio de um processo de validação por pares e uma prova de trabalho
+                que garante que todos os nós da rede concordem sobre o estado atual do registro público. Esse processo torna a rede
+                Bitcoin resistente a ataques e garante que todas as transações sejam validadas e registradas de forma justa e
+                transparente.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <a id="back" href="../index.html">Voltar</a>
+    </footer>
+</body>
+</html>

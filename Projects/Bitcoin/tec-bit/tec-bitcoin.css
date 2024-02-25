@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    fonts/merriweather/static/Merriweather-Black.ttf
+    boa fonte para titulo
+*/
+
+body{
+    position: relative;
+}
+
+@font-face {
+    font-family: font01;
+    src: url(fonts/lato/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: font02;
+    src: url(fonts/Helvetica\ Neue\ Light.otf);
+}
+@font-face {
+    font-family: font03;
+    src: url(fonts/FuturaPTDemi.otf);
+}
+@font-face {
+    font-family: font04;
+    src: url(fonts/FuturaPTDemi.otf);
+}
+
+/*header*/
+header{
+    background-image: url(img/header-bitcoin-tec.png);
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    color: white;
+    height: 500px;
+    padding: 100px 0;
+}
+
+
+/*flex: tecnologias bitcoin */
+header > section#tecnologias > .text-info{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/*texto e imagem*/
+header > section#tecnologias > .text-info > .font1 > h2 > img{
+    width: 100%;
+    max-width: 15vw;
+    padding: 0;
+    display: inline-block;
+}
+/*texto: tecnologias bitcoin */
+header > section#tecnologias > .text-info > .font1 > h2{
+    font-size: 4.75vw;
+    width: 100%;
+    max-width: 700px;
+    font-family: font01;
+}
+
+/*topicos: funcionamento bitcoin*/
+header > section#tecnologias > .text-info > .font2{
+    font-size: 20px;
+    font-family: font01;
+    /*'Courier New', Courier, monospace*/
+    width: 100%;
+    max-width: 618px;
+    margin-top: 20px;
+}
+header > section#tecnologias > .text-info > .font2 > .list > ul {
+    column-count: 3;
+    padding: 20px;
+}
+header > section#tecnologias > .text-info > .font2 > .list > ul > a {
+    text-decoration: underline #172488;
+    color: white;
+}
+main{
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    padding: 10px;
+}
+
+#blockchain{
+    margin-top: 50px;
+}
+
+#hash{
+    margin-top: 50px;
+}
+#hash > h3{
+    display: inline-block;
+    background-color: rgba(192, 192, 192, 0.712);
+    padding: 3px;
+    border-radius: 3px;
+    font-family: font03;
+}
+#hash > .lista{
+    padding: 10px 30px;
+}
+#hash > .lista > ol > li{
+    color: rgb(0, 0, 0);
+    padding: 5px 2px;
+    font-family: font04;
+}
+
+#criptografia{
+    margin-top: 50px;
+}
+
+#mineracao{
+    margin-top: 50px;
+}
+
+#carteiras{
+    margin-top: 50px;
+}
+
+#nodes{
+    margin-top: 50px;
+}
+#nodes > h3{
+    font-size: 1.5vw;
+    margin: 15px 0;
+    font-family: font03;
+}
+#nodes > h4{
+    display: inline-block;
+    background-color: rgba(224, 12, 12, 0.5);
+    padding: 3px;
+    border-radius: 3px;
+    font-family: font03;
+}
+
+.fontp{
+    text-align: center;
+    font-size: 2.8vw;
+}
+
+p{
+    font-size: 16px;
+    text-align: justify;
+    margin: 10px 0;
+    font-family: font02;
+    line-height: 1.7;
+    letter-spacing: 1px;
+}
+h2{
+    font-size: 1.9vw;
+    margin: 10px 0;
+    font-family: font03;
+}
+
+img{
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    margin: auto;
+    display: block;
+}
+
+.video{
+    position: relative;
+    padding-bottom: 55%;
+    padding: 0 10px 55% 10px;
+}
+.video > iframe{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+span{
+    background-color: rgba(177, 177, 177, 0.411);
+    padding: 3px;
+    color: rgb(255, 60, 0);
+    font-weight: bold;
+    border-radius: 3px;
+}
+span.subtitle{
+    color: black;
+    background-color: rgba(60, 161, 255, 0.432);
+    border-radius: 5px;
+    padding: 0 4px;
+}
+
+#back{
+    position: absolute;
+    bottom: 75px;
+    right: 75px;
+    padding: 10px 50px;
+    border: 1px solid #a49400;
+    border-radius: 5px;
+    background-color:#eab300 ;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: font04;
+    cursor: pointer;
+    color: #4d4017;
+}
+
+#back:hover{
+    background-color: #f7931a;
+}
+@media screen and (max-width: 1413px) {
+    footer{
+    width: 100%;
+    text-align: center;
+    background-color:#eab300 ;
+}
+footer > #back{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: font04;
+    cursor: pointer;
+    color: #4d4017;
+}
+
+#back{
+    position: initial;
+    bottom: 0;
+    right: 0;
+    padding: 0 150px;
+    border: none;
+    border-radius: 0;
+}
+
+#back:hover {
+    background-color: #eab300;
+}
+}
+
+@media screen and (max-width: 1333px) {
+    header > section#tecnologias > .text-info > .font1 > h2 > img{
+        display: block;
+        margin: auto;
+    }
+
+    /*texto: tecnologias bitcoin */
+    header > section#tecnologias > .text-info > .font1 > h2 {
+        font-size: 5vw;
+        width: 100%;
+        max-width: 700px;
+        font-family: font01;
+        text-align: center;
+    }
+    header > section#tecnologias > .text-info > .font2{
+        font-size: 20px;
+        font-family: font01;
+        /*'Courier New', Courier, monospace*/
+        width: 100%;
+        max-width: 650px;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 850px) {
+    header > section#tecnologias > .text-info > .font1 > h2 {
+        font-size: 8vw;
+    }
+    header > section#tecnologias > .text-info > .font1 > h2 > img {
+        display: block;
+        margin: auto;
+    }
+
+    /*texto: tecnologias bitcoin */
+    header > section#tecnologias > .text-info > .font1 {
+        font-size: 12px;
+        font-family: font01;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    header > section#tecnologias > .text-info > .font2 > h3{
+        padding: 10px;
+        text-align: center;
+    }
+
+    header > section#tecnologias > .text-info > .font2 > .list{
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    header > section#tecnologias > .text-info > .font2 > .list > ul {
+        column-count: 2;
+        width: 100%;
+        max-width: 400px;
+        margin: auto;
+    }
+
+    h2.fontp{
+        font-size: 33px;
+        margin: 10px 0;
+        font-family: font03;
+    }
+    h2{
+        font-size: 27px;
+        margin: 10px 0;
+        font-family: font03;
+    }
+    #nodes > h3{
+        font-size: 27px;
+    }
+
+}
+
+@media screen and (max-width: 499px) {
+    header > section#tecnologias > .text-info > .font2 > h3{
+        padding: 10px;
+        text-align: center;
+    }
+
+    header > section#tecnologias > .text-info > .font2 > .list{
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        padding: 10px;
+    }
+
+    header > section#tecnologias > .text-info > .font2 > .list > ul {
+        column-count: 1;
+        width: 100%;
+        max-width: 150px;
+        margin: auto;
+    }
+    #back{
+        padding: 0 100px;
+    }
+}
